@@ -1,10 +1,17 @@
-const express = require('express');
-const app = express();
-const router = express.Router();
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './app';
 
-// #Sends the main page#
-router.get('/',(req,res)=>{
-    res.render('index');
-});
+ReactDom.render(<App/>, document.getElementsById('root'));
 
-module.exports = router;
+
+// const express = require('express');
+// const app = express();
+// const router = express.Router();
+
+// // #Sends the main page#
+// router.get('/',(req,res)=>{
+//     res.render('index');
+// });
+
+// module.exports = router;
