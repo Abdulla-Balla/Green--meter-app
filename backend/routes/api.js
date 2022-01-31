@@ -37,8 +37,9 @@ router.get('/reading/:sensor/:start/:end', (req,res)=>{
 router.post('/reading/:sensor', (req,res)=>{
     const reading = new SensorReading({
         sensor: req.params.sensor,
-        value: 409,
-        time: new Date(2021,06,1,3,12,17,0)
+        value: req.body.value,
+        // time: new Date(2021,06,1,3,12,17,0)
+        time: new Date(req.body.time)
     });
     reading.save()
     .then((result)=>{
