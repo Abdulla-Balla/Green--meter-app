@@ -1,8 +1,8 @@
 import React from "react"
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes,Route} from 'react-router-dom'
 import Current from './components/Current'
-
+import Sidebar from './components/Sidebar'
 const Console = prop => (
   console[Object.keys(prop)[0]](...Object.values(prop))
   ,null // ➜ React components must return something 
@@ -20,10 +20,13 @@ function App() {
       .catch((err) => {console.error(err)})
     },[]);
   return (
-    <div>
-      <p>Hello</p>
-      <p>{api.ppm}</p>
-      <Current/>
+    <div className="App">
+      <Router>
+        <Sidebar />
+        <Routes>
+          <Route path='/'/>
+        </Routes>
+      </Router>
     </div>
   );
 }
