@@ -1,16 +1,34 @@
 .sidebar{
-    background-color: blanchedalmond;
-    height: 80px;
+    background-color: rgb(83, 201, 103);
+    height: 10vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.nav-menu-items{
+    width: 100%;
+}
+
+.navbar-toggle{
+    padding: 0 0 0 1vw;
+    width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
 .nav-menu {
-    background-color: blanchedalmond;
-    width: 13%;
-    top: 0;
+    background-color: rgb(83, 201, 103);
+    width: 13vw;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    top: 0;
+    left:-100%;
+    position:fixed;
     transition: 850ms;
 }
 
@@ -36,5 +54,14 @@
     height: 100%;
     display: flex;
     align-items: center;
-    
+    border-radius: 4px;
+    padding-left:4px
+}
+
+.nav-option a:hover {
+    background-color: blue;
+}
+
+.nav-option-text{
+    padding-left:4rem;
 }
