@@ -13,16 +13,6 @@ const Console = prop => (
 )
 
 function App() {
-  const [api, setApi] = React.useState("");
-  React.useEffect(()=>{
-    // Get request to api providing data
-    fetch('/api/reading/1')
-      .then(response =>
-        (response.json())
-      )
-      .then(data => setApi(data))
-      .catch((err) => {console.error(err)})
-    },[]);
   return (
     <div className="App">
       <BrowserRouter>

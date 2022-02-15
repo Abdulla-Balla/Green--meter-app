@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const SensorReading = require('../models/SensorReading')
-const bodyParser
+// const bodyParser
 
 // # Get response for sensors #
 // This gets a single, most recent reading that matches the search parameter
@@ -18,6 +18,8 @@ router.get('/reading/:sensor', (req,res)=>{
 // This gets collection of readings that matches the search parameters
 router.get('/reading/:sensor/:start/:end', (req,res)=>{
     console.log("Recieved request");
+    console.log(req.params.start)
+    console.log(new Date('2022-02-08T04:06:07.599Z'))
     //Searches for corresponding sensor number within the selected time range
     SensorReading.find({
         sensor: req.params.sensor, 
