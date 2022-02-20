@@ -1,9 +1,9 @@
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
-import PropTypes from 'prop-types'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
-import { TIME_OPTIONS } from '../constants/time';
+import { TIME_OPTIONS, SENSORS } from '../constants/enum';
 import './Graph.css'
+
 function Graph(props) {
   const { height, width } = useWindowDimensions();
     const [data, setData] = React.useState(null);
@@ -28,19 +28,16 @@ function Graph(props) {
         }
         var currentTime = new Date();
         var offsetTime = new Date(currentTime-offset);
-        var reqString = '/api/reading/1/'+offsetTime.toISOString()+'/'+currentTime.toISOString();
+        var reqString = '/api/reading/'+SENSORS[props.sensor]+'/'+offsetTime.toISOString()+'/'+currentTime.toISOString();
         
         fetch(reqString)
         .then(res=> res.json())
         .then(data => {
             setData(data)
         });
-    },[props.timeInt]);
-    
-    // return [{'val':300, 'time':'Dec 1'}, {'val': 340,'time':"Dec 2"}, {'val': 339,'time':"Dec 3"},{'val': 324, 'time':"Dec 4"},{'val': 354,'time':"Dec 5"},{'val': 389, 'time':"Dec 6"},{'val': 403, 'time':"Dec 7"}]
+    },[props.timeInt, props.sensor]);
   return (
     <div className='history-container'>
-        {/* Add this part later */}
         <LineChart width={ width<600 ? width : width*0.7} height={height*0.5} data={data} margin={{top: 0, right: 40, bottom: 0, left: 0}}>
             <Line type='monotone' dataKey='value' stroke='#40d39d' />
             <CartesianGrid stroke='#ccc'/>

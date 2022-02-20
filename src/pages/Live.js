@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Current from '../components/Current';
 import './Live.css'
 function Live() {
-    // React.useEffect(()=>{
-    //     // Get request to api providing data
-    //     fetch('/api/reading/1')
-    //       .then(response =>
-    //         (response.json())
-    //       )
-    //       .then(data => setApi(data))
-    //       .catch((err) => {console.error(err)})
-    //     },[]);
+    const [time, setTime] = useState(new Date().toUTCString());
+    function getTime(){
+        var date = new Date().toString();
+        date = date.split(':');
+        date = date[0] + ':' + date[1] +':' + date[2].substring(0,2)
+        return date;
+    }
     return (
         <div className='live'>
             <h1 className='page-title'>Live data</h1>
-            {/* <Current /> */}
+            <Current time={time}/>
+            <h3 className='time'>{time}</h3>
+            <button onClick={()=>setTime(getTime())}>Update</button>
         </div>
     );
 }

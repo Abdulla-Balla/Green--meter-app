@@ -11,18 +11,28 @@
 }
 @media only screen and (max-width: 600px){
     .page-title{
-        margin: 5vh 0 5vh 0;
+        padding-top:1.5vh;
+        margin-bottom: 2.5vh;
     }
 }
 .time-options{
-    margin-top: 5vh;
+    margin-top: 4vh;
     display: flex;
     justify-content: space-around;
     width: 60%;
-    height: 3%;
 }
 .time-options button{
     min-width: 50px;
     min-height: 50px;
     border-radius: 50%;
+}
+
+.dropdown{
+    margin-top: 2%;
+}
+
+@media only screen and (max-width: 600px){
+    .dropdown{
+        margin: 10%;
+    }
 }

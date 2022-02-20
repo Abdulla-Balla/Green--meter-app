@@ -1,16 +1,14 @@
 import CurrentPPM from './CurrentPPM'
-import Sidebar from './Sidebar'
 import React from 'react'
 
-function Current(){
-    const [data, setData] = React.useState('some data');
-    
-
+function Current(props){
     return (
-        <div className="view">
-            <Sidebar/>
-            <CurrentPPM pass = {data}/>
-            <CurrentPPM pass = {data}/>
+        <div className='view'>
+            <CurrentPPM time={props.time}>
+
+            </CurrentPPM>
+            <CurrentPPM time={props.time}/>
+            <CurrentPPM time={props.time}/>
         </div>
     )
 }
