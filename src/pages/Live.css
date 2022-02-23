@@ -1,24 +1,54 @@
-.live{
-    display:flex;
+.live {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
 }
 
-.view{
-    display:flex;
-    width:80%;
-    justify-content:space-around;
+.view {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.display{
-    display:flex;
+
+.display {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:200px;
+    height: 200px;
     width: 200px;
-    margin-bottom: 30px;
     border-radius: 50%;
-    background-color: rgba(45, 196, 150, 0.7);
+    border: 10px solid transparent;
+    border-top: 10px solid rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+    animation: rotate 2.5s infinite linear;
+}
+
+.display::after{
+    position: absolute;
+    display:flex;
+    content: '';
+    top:-200px;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.value {
+    animation: counter 2.5s infinite linear;
+    font-weight: bold;
+    z-index: 2;
+}
+
+@keyframes rotate{
+    from {}
+    to {transform: rotate(360deg)}
+}
+@keyframes counter{
+    from {}
+    to {transform: rotate(-360deg)}
 }
