@@ -9,7 +9,10 @@ import './Sidebar.css'
 function Sidebar(){
     const [sidebar, setSidebar] = useState(false)
 
-    const toggleSidebar = () => setSidebar(!sidebar)
+    const toggleSidebar = () => {
+        setSidebar(!sidebar);
+        console.log(sidebar)
+    }
     return (
         <>
             <IconContext.Provider value={{color:'#000'}}>

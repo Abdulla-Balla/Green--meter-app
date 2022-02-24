@@ -6,7 +6,7 @@ export const TIME_OPTIONS = {
 }
 
 export const SENSORS ={
-    "Sensor 1": 1,
-    "Sensor 2": 2,
-    "Sensor 3": 3,
+    "Sensor 1": '1',
+    "Sensor 2": '2',
+    "Sensor 3": '3',
 }

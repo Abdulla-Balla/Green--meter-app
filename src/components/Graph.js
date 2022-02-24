@@ -28,8 +28,9 @@ function Graph(props) {
         }
         var currentTime = new Date();
         var offsetTime = new Date(currentTime-offset);
-        var reqString = '/api/reading/'+SENSORS[props.sensor]+'/'+offsetTime.toISOString()+'/'+currentTime.toISOString();
         
+        var reqString = '/api/reading/'+ props.sensor+'/'+offsetTime.toISOString()+'/'+currentTime.toISOString();
+        console.log(reqString)
         fetch(reqString)
         .then(res=> res.json())
         .then(data => {

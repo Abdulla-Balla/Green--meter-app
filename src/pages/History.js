@@ -7,9 +7,9 @@ function History() {
     
     const [timeInt, setTimeInt] = useState(TIME_OPTIONS.WEEK)
     const [sensorNum, setSensorNum] = useState(SENSORS['Sensor 1'])
+    console.log(sensorNum)
     const updateData = time =>{
         setTimeInt(time)
-        console.log(time)
     };
 
     function handleSensorSelect(event){
