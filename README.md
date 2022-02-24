@@ -16,3 +16,8 @@ This project utilizes the MERN stack
 ![Screenshot](/screenshots/setting.PNG)
 ![Screenshot](/screenshots/setting_popup.PNG)
 ![Screenshot](/screenshots/sidebar.PNG)
+<br>
+### Mobile
+![Screenshot](/screenshots/mobile.png)
+<br>
+![Screenshot](/screenshots/mobile_sidebar.png)
