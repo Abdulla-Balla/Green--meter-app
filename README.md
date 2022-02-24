@@ -5,7 +5,14 @@ Contains the server which provides the API services for the CO2Meter application
 ## Frameworks
 This project utilizes the MERN stack
 
-## Notes
-Refer to CO2Meter-android-app (https://github.com/Aduno/CO2Meter-android-app) for the android application.
-
-* Web app is under development
+## Demo
+### Live view page
+![Screenshot](/screenshots/live.PNG)
+<br>
+### History page
+![Screenshot](/screenshots/history.PNG)
+<br>
+### Settings page
+![Screenshot](/screenshots/setting.PNG)
+![Screenshot](/screenshots/setting_popup.PNG)
+![Screenshot](/screenshots/sidebar.PNG)
