@@ -1,4 +1,4 @@
-# Green Meter App 🌱
+# Green Meter App �
 
 **Green Meter App** is a web-based carbon footprint calculator that estimates and optimizes CO₂ emissions based on activity data and adjustable sliders.
 
@@ -20,5 +20,4 @@ This app allows users to enter activity data for various categories including ca
 - Developed in collaboration with our school team for educational purposes.
 - Special thanks to all team members for their contributions.
 
-## License
-MIT License
+
